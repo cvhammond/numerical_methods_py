@@ -12,10 +12,7 @@ def fixed_point_iteration(g, x_0):
         x_r_old = x_r
     return x_r
 
-
-
 def main():
-
     # x^2 + 2x - 3 = 0 rearranges to x = (-x^2 + 3) / 2
     def g(x):
         return (-x ** 2 + 3) / 2

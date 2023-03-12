@@ -5,22 +5,17 @@ def bisection_method(f, x_l, x_u):
     x_r_old = sys.maxsize
 
     while abs(x_u - x_l) > 1e-15:
-
         x_r = (x_l + x_u) / 2
-
         if x_r != 0 and abs((x_r - x_r_old) / x_r) < 1e-9:
             return x_r
-
         x_r_old = x_r
 
         if f(x_r) * f(x_l) < 0:
             x_u = x_r
             continue
-
         if f(x_r) * f(x_l) > 0:
             x_l = x_r
             continue
-
         if f(x_r) * f(x_l) == 0:
             return x_r
 
